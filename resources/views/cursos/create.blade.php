@@ -3,5 +3,5 @@
 @section('title', 'Create')
 
 @section('content')
-<h1>"Formulario para crear NUEvOS cursos"</h1>
+<h1>"Formulario para crear NUEvOS CURSOS Y TALLERES"</h1>
 @endsection
