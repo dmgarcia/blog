@@ -14,7 +14,7 @@ class ChangePropiedadesToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('name', 150)->change();
+            $table->string('name', 150)->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class ChangePropiedadesToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('name', 255 )->change();
+            $table->string('name', 255 )->nullable(false)->change();
         });
     }
 }
