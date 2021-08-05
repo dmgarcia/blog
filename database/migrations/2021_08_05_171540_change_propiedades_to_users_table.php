@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCursosTable extends Migration
+class ChangePropiedadesToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateCursosTable extends Migration
      */
     public function up()
     {
-        Schema::create('cursos', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('descripcion');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('name', 150)->change();
         });
     }
 
@@ -28,6 +25,8 @@ class CreateCursosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cursos');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('name', 255 )->change();
+        });
     }
 }
