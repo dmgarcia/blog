@@ -15,6 +15,7 @@ class CursoFactory extends Factory
      */
     protected $model = Curso::class;
 
+
     /**
      * Define the model's default state.
      *
