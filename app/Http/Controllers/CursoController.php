@@ -19,6 +19,12 @@ class CursoController extends Controller
     }
 
     public function store(Request $request){
+
+        $request->validate([
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'categoria' => 'required'
+        ]);
        
         $curso = new Curso();
 
@@ -47,7 +53,7 @@ class CursoController extends Controller
     public function update(Request $request, $id){
         
         $curso = Curso::find($id);
-        
+
         $curso->nombre = $request->nombre;
         $curso->descripcion = $request->descripcion;
         $curso->categoria = $request->categoria;
