@@ -1,11 +1,11 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Create')
+@section('title', 'Editar')
 
 @section('content')
 <h1>"Formulario para editar CURSOS Y TALLERES"</h1>
 
-<form action="{{route('cursos.update', $curso->id)}}" method="POST">
+<form action="{{route('cursos.update', $curso)}}" method="POST">
 
 @csrf
 @method('PUT')

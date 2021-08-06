@@ -44,8 +44,9 @@ class CursoController extends Controller
 
     }
 
-    public function update(Request $request){
-        $curso = new Curso();
+    public function update(Request $request, $id){
+        
+        $curso = Curso::find($id);
         
         $curso->nombre = $request->nombre;
         $curso->descripcion = $request->descripcion;
