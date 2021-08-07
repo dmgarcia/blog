@@ -61,5 +61,11 @@ class CursoController extends Controller
 
     }
 
+    public function destroy($curso){
+        $curso = Curso::find($curso);
+        $curso->delete();
+        return redirect()->route('cursos.index');
+    }
+
     
 }

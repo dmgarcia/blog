@@ -19,7 +19,14 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        <style>
+            .active{
+                color: red;
+                font-weight:900;
+            }
+        </style>
     </head>
+    @include('layouts.partials.header')
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))

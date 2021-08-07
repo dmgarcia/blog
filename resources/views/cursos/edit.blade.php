@@ -43,7 +43,7 @@
     @enderror
     <br>
 
-    <button title="submit">Actualizar</button>
+    <button type="submit">Actualizar</button>
 
 </form>
 @endsection

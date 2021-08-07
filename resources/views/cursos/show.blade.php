@@ -8,4 +8,9 @@
 <p><strong>"Descripción"</strong>{{$curso->descripcion}}</p>
 <a href="{{route('cursos.index')}}">Lista de Cursos</a>
 <a href="{{route('cursos.edit', $curso->id)}}">Editar</a>
+<form action="{{route('cursos.destroy', $curso)}}" method="POST" >
+@csrf
+@method('DELETE')
+<button type="submit">Eliminar</button>
+</form>
 @endsection
