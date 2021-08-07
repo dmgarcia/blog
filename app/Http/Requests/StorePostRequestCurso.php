@@ -29,4 +29,20 @@ class StorePostRequestCurso extends FormRequest
             'categoria' => 'required'
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'nombre' => 'nombresito',
+        ];
+        
+    }
+
+    public function messages()
+    {
+        return [
+            'descripcion,required' => 'descripcioncita  tiene que ser de maximo 10 caracteres',
+        ];
+        
+    }
 }

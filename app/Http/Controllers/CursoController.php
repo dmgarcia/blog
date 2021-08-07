@@ -29,6 +29,8 @@ class CursoController extends Controller
 
         $curso->save();
 
+        //$curso = Curso::create($request);
+
         return redirect()->route('cursos.show', $curso->id);
     }
 
